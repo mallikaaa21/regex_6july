@@ -1,0 +1,814 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMF/VKWh3guvmG5QlSYlSFV",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/mallikaaa21/regex_6july/blob/main/python-regex\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "year = 2023 # Assign a value to year\n",
+        "company = \"regex software\" # Assign a value to company\n",
+        "\n",
+        "print(\"hey year is\" ,year, \"company is\", company)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TdPjediX9K6K",
+        "outputId": "9f1369bf-8110-49be-bbf4-2c212c3f5d98"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hey year is 2023 company is regex software\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(f\"hey year is {year} comapny is {company}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PbgQsKSG9R42",
+        "outputId": "4b01b3cb-4744-4435-967d-76d564d11dee"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hey year is 2023 comapny is regex software\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "username=\"regex\"\n",
+        "msg=f\"hey user {username}\"\n",
+        "print(msg)\n",
+        "username=\"tushar\"\n",
+        "print(msg)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tEeRr2Dq9vo5",
+        "outputId": "8af13e50-bd8b-4f32-e556-cca7638942b8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hey user regex\n",
+            "hey user regex\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "state = \"RAJASTHAN\"\n",
+        "state[3]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "269x25Uu_pI4",
+        "outputId": "281a5439-95ff-44a3-9658-fc45b6af2e71"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'A'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "state = \"RAJASTHAN\"\n",
+        "state[0:4]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "ZpOMwAE8AFj4",
+        "outputId": "27dd65de-df4e-4411-cf15-cf3792d57485"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'RAJA'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "state = \"RAJASTHAN\"\n",
+        "state[2:5]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "Zh4NeQtjAaio",
+        "outputId": "517659d7-41bb-4afd-f5e6-f3e7960d9f67"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'JAS'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 9
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "state = \"RAJASTHAN\"\n",
+        "state[0:]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "ScbendC4AjNx",
+        "outputId": "74d2751e-bb3f-4096-8c13-343d7ad04085"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'RAJASTHAN'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 10
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "state = \"RAJASTHAN\"\n",
+        "state[3:]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "qoBPEWdFAqMs",
+        "outputId": "4783b1b0-6272-44fa-e4c3-93a4b50ef2ad"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'ASTHAN'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "state = \"RAJASTHAN\"\n",
+        "state[1:6:2]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "jt4X6CHxAvBR",
+        "outputId": "ce86f255-e7fe-4d82-aa08-15acab7b43f1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'AAT'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 12
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "state = \"RAJASTHAN\"\n",
+        "state[0:7:3]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "GDc4wza3CLAu",
+        "outputId": "4fae9620-a1b9-4120-ad29-5611a2d46884"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'RAH'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 13
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "state = \"RAJASTHAN\"\n",
+        "state[2::2]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "6MPsPxePCcV3",
+        "outputId": "c8447b8f-4f8d-4736-c43d-2862aca982fd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'JSHN'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "state = \"RAJASTHAN\"\n",
+        "state[0:4:-1]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "-RmRBpQ7CvRH",
+        "outputId": "88ca9cee-d395-4f10-fb45-a491d253fd4d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "''"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 16
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "state = \"RAJASTHAN\"\n",
+        "state[-1]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "TIrVThFTDFU3",
+        "outputId": "f171b89b-478f-477e-a64d-7b6379d8b21d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'N'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 17
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "state = \"RAJASTHAN\"\n",
+        "state[-1:-4]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "rINl3eXZDKkP",
+        "outputId": "479a76f2-502d-4d49-8ff4-61fcc5351135"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "''"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 18
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "state = \"RAJASTHAN\"\n",
+        "state[-1:-4:]"
+      ],
+      "metadata": {
+        "id": "TY51ACAHDrzR",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "24588fd2-25f5-4008-818b-84c2e3abc388"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "''"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x+"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 110
+        },
+        "id": "q-gq6v7WEGeF",
+        "outputId": "39716eca-f3f3-4123-cccf-3c528fadd7d0"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "invalid syntax (<ipython-input-2-20cb18161e31>, line 1)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-2-20cb18161e31>\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    x+\u001b[0m\n\u001b[0m      ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=10\n",
+        "if(x>5):\n",
+        "    print(\"hey\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "o-oO3xVqFbIW",
+        "outputId": "964f6f3f-5de9-44ed-a6b5-f787895bf359"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hey\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=2\n",
+        "if(x>5):\n",
+        "    print(\"hey\")\n",
+        "else:\n",
+        "    print(\"Mallika\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "m0H-b1TWFoUP",
+        "outputId": "7dc8e961-ae8b-46b0-bb20-8f70ff68415c"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Mallika\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = 10103\n",
+        "if(num %  5 == 0):\n",
+        "    print(\"divisible by 5\")\n",
+        "else:\n",
+        "    print(\"not divisible by 5\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GRAKGUicGVIs",
+        "outputId": "256588e5-55a2-4c36-e412-d972eb4b52c3"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "not divisible by 5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = 991\n",
+        "if(num % 5 == 0):\n",
+        "    print(\"divisible by 5\")\n",
+        "elif(num % 3 == 0):\n",
+        "    print(\"divisible by 3\")\n",
+        "else:\n",
+        "    print(\"not divisible by 5 or 3\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JLMeS0_aIrTJ",
+        "outputId": "f46e29c8-212b-4087-ca9b-f615a5078418"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "not divisible by 5 or 3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = [44, 5, 90]\n",
+        "print(min(num))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "u-fMhGpvJ241",
+        "outputId": "18e89bd5-3bfb-4e2d-ae84-a21d850e3c45"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 10\n",
+        "y = 5\n",
+        "z =15\n",
+        "if(x<y and x<z):\n",
+        "    print(\"x is smaller\")\n",
+        "elif(y<x and y<z):\n",
+        "    print(\"y is smaller\")\n",
+        "else:\n",
+        "    print(\"z is smaller\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PWjBFYIWLDNj",
+        "outputId": "e70c8225-86f8-4501-d9f9-7e9b8855d3f5"
+      },
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "y is smaller\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "age = 2\n",
+        "if(age>=5):\n",
+        "    print(\"aadhar card\")\n",
+        "elif(age>=18):\n",
+        "    print(\"eligible for vote\")\n",
+        "else:\n",
+        "    print(\"not eligible\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "P0vzjTNsLk9J",
+        "outputId": "3cc1b470-d385-4d0e-9853-5b1bc07c0afe"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "not eligible\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = input(\"enter a number\")\n",
+        "weekdays = {1:\"sunday\", 2:\"monday\", 3:\"tuesday\", 4:\"wednesday\", 5:\"thursday\", 6:\"friday\", 7:\"saturday\"}\n",
+        "num = int(x)\n",
+        "if(num<=1):\n",
+        "    print(weekdays[num])\n",
+        "elif(num<=7):\n",
+        "    print(weekdays[num])\n",
+        "else:\n",
+        "    print(\"not a weekday\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QA46Gjt91RVD",
+        "outputId": "e18d38a6-1660-49fe-b2e5-138b7a82cf7e"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter a number5\n",
+            "thursday\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "age = int(input(\"enter your age\"))\n",
+        "\n",
+        "\n",
+        "if age<18:\n",
+        "    print(\"young\")\n",
+        "elif age >= 25 and age <= 35:\n",
+        "    print(\"adult\")\n",
+        "elif age > 35 and age <=50:\n",
+        "    print(\"senior\")\n",
+        "elif age>50:\n",
+        "    print(\"senior citizen\")\n",
+        "else:\n",
+        "    print(\"child\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "v-tmfo3O42ZT",
+        "outputId": "d6798a9f-518c-43bf-c0e6-15c26f165d06"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter your age21\n",
+            "child\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import os\n",
+        "import sys\n",
+        "user_input = input(\"Enter command (user 1, user 2, user 3): \")\n",
+        "\n",
+        "if user_input == \"user 1\":\n",
+        "    desktop_path = os.path.join(os.path.expanduser(\"~\"), \"Desktop\")\n",
+        "    folder_path = os.path.join(desktop_path, \"NewFolder\")\n",
+        "    os.makedirs(folder_path, exist_ok=True)\n",
+        "    print(f\"Folder created at: {folder_path}\")\n",
+        "\n",
+        "elif user_input == \"user 2\":\n",
+        "    desktop_path = os.path.join(os.path.expanduser(\"~\"), \"Desktop\")\n",
+        "    folder_path = os.path.join(desktop_path, \"NewFolder\")\n",
+        "    file_path = os.path.join(folder_path, \"NewFile.txt\")\n",
+        "    with open(file_path, 'w') as file:\n",
+        "        file.write(\"This is a new file.\")\n",
+        "    print(f\"File created at: {file_path}\")\n",
+        "\n",
+        "elif user_input == \"user 3\":\n",
+        "    if sys.platform == \"win32\":\n",
+        "        os.system(\"shutdown /s /t 1\")\n",
+        "    else:\n",
+        "        print(\"Shutdown command only implemented for Windows.\")\n",
+        "    print(\"System is shutting down...\")\n",
+        "\n",
+        "else:\n",
+        "    print(\"Invalid command.\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wS-hTirnGXi0",
+        "outputId": "cedf3c47-88ee-4799-a39f-3b24e2ca70b4"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter command (user 1, user 2, user 3): user 1\n",
+            "Folder created at: /root/Desktop/NewFolder\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
